@@ -110,3 +110,13 @@ body::after {
 При наведении курсора:
 ![Скриншот](https://i.ibb.co/Z1VHysPV/image.png)
 ![Скриншот](https://i.ibb.co/jPFcYKxC/image.png)
+
+возможно у вас не будет работать для мобильной версии (из-за того, что я ещё много не умею в github), поэтому вот вам часть кода, которую вам надо вставить в Шикимори вместе с основным кодом : 
+```css
+@media (max-width: 768px) {
+  @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
+  
+  body {
+    background-image: url('https://i.ibb.co/4gwT70P1/ec8c6de737e19e47db794ce577686947.jpg') !important;
+  }
+```
