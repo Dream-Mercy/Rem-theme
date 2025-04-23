@@ -1,6 +1,0 @@
-@media (max-width: 768px) {
-  @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
-  
-  body {
-    background-image: url('https://i.ibb.co/4gwT70P1/ec8c6de737e19e47db794ce577686947.jpg') !important;
-  }
