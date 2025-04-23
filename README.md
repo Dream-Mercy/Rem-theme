@@ -14,7 +14,7 @@
 Или вручную:
 
 ```css
-@import url("https://raw.githubusercontent.com/Dream-Mercy/Rem-theme/main/Rem-theme-shiki");
+@import url("https://raw.githubusercontent.com/Dream-Mercy/Rem-theme/main/Rem-theme-shiki.css");
 ```
 ## 🎀 Особенности темы
 Цветовая палитра Рем: глубокие синие и розовые оттенки
