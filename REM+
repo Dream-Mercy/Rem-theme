@@ -1,0 +1,410 @@
+/* ======= ИМПОРТЫ И БАЗОВЫЕ СТИЛИ ======= */
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_1.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
+
+/* ======= ГЛОБАЛЬНЫЕ НАСТРОЙКИ ======= */
+body {
+  /* Фон для ПК */
+  background: 
+    linear-gradient(to top, rgba(26, 26, 46, 0.9), transparent 150px),
+    #1a1a2e url('https://i.ibb.co/nvz5jhP/9cb5bd37bc9818e1a5eca60c4578a83c.png') fixed !important;
+  background-size: cover !important;
+  color: #b0b0ff !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* Дублирующий фон через ::after (для совместимости) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://i.ibb.co/HTbd0YkY/cb1002a96dc0af68483f6569193cfda0.jpg') center/cover no-repeat;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* ======= ПРОФИЛЬ ======= */
+/* Шапка профиля */
+.profile-head {
+  background: rgba(26, 26, 46, 0.6) !important; /* Основной фон */
+}
+
+.profile-head .avatar {
+  border: 3px solid rgba(126, 192, 238, 0.5) !important; /* Рамка */
+  box-shadow: 
+    0 0 20px rgba(126, 192, 238, 0.3),
+    inset 0 0 15px rgba(232, 59, 106, 0.2) !important;
+  background-color: rgba(26, 26, 46, 0.2) !important;
+}
+
+.profile-head .avatar:hover {
+  box-shadow: 0 0 20px rgba(126, 192, 238, 0.8) !important;
+  filter: drop-shadow(0 0 5px #e83b6a) !important;
+}
+
+/* Основные блоки */
+.profile-content, 
+.profile-about, 
+.profile-page .block,
+.layout-content {
+  background: rgba(26, 26, 46, 0.85) !important;
+  backdrop-filter: blur(5px) !important;
+  border: none !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* "О себе" */
+.profile-about {
+  background: rgba(30, 30, 60, 0.9) !important;
+  border: 1px solid #7ec0ee !important;
+}
+
+/* ======= ТЕКСТ ======= */
+.b-post__content,
+.user-rates .text,
+.b-comment .body,
+.profile-head .user-info {
+  color: #c0c0ff !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3) !important;
+  line-height: 1.5 !important;
+}
+
+/* Заголовки */
+h1, h2, h3, .b-headline {
+  color: #7ec0ee !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ======= ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ ======= */
+/* Кнопки */
+.button, .b-button, 
+.profile-actions a,
+.profile-settings {
+  background: linear-gradient(to right, #e83b6a, #7ec0ee) !important;
+  color: white !important;
+  border: none !important;
+  transition: 0.3s !important;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #7ec0ee, #e83b6a) !important;
+  box-shadow: 0 0 15px #e83b6a !important;
+}
+
+/* Карточки */
+.b-db_entry,
+.profile-page .b-db_entry {
+  background: rgba(40, 40, 80, 0.7) !important;
+  border-left: 3px solid #e83b6a !important;
+  transition: 0.3s !important;
+}
+
+.b-db_entry:hover {
+  background: rgba(126, 192, 238, 0.2) !important;
+  transform: translateX(5px) !important;
+}
+
+/* ======= КУРСОРЫ ======= */
+html, body, body * {
+  cursor: url('https://i.ibb.co/0nQ7zJX/rem-horn-cursor.png'), auto !important;
+}
+
+a, button, [onclick], 
+.b-link, .b-button, 
+.b-menu > li > a {
+  cursor: url('https://i.ibb.co/0nQ7zJX/rem-horn-cursor.png'), pointer !important;
+}
+
+input[type="text"], textarea {
+  cursor: url('https://i.ibb.co/0nQ7zJX/rem-horn-text.png'), text !important;
+}
+
+/* ======= АДАПТИВ ======= */
+@media (max-width: 1200px) {
+  #profiles_show .profile-head::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
+  
+  body {
+    background-image: url('https://i.ibb.co/4gwT70P1/ec8c6de737e19e47db794ce577686947.jpg') !important;
+  }
+  /* Элементы статистики */
+.profile-head .user-info {
+  background: rgba(30, 30, 60, 0.7) !important;
+  backdrop-filter: blur(5px);
+}
+  
+  .profile-head {
+    backdrop-filter: none !important;
+  }
+}
+
+/* Футер */
+.l-footer::after {
+  content: "*Calidum*";
+  display: inline;
+}
+/* ======= КАТЕГОРИИ И ЦВЕТА ======= */
+:root {
+  /* Основные цвета Рем */
+  --rem-blue: #7ec0ee;       /* Цвет глаз */
+  --rem-pink: #e83b6a;       /* Цвет роз/крови */
+  --rem-dark: #1a1a2e;       /* Тёмный фон */
+  --rem-light: #f0f0ff;      /* Светлый текст */
+  --rem-gold: #ffd700;       /* Акценты */
+
+  /* Формы и кнопки */
+  --input-color: 30, 30, 60;
+  --buttoms-color: var(--rem-pink);
+  --hover-bottoms-1: #d82c5d;
+  --hover-color: rgba(126, 192, 238, 0.4);
+  --hover-buttoms-2: 126, 192, 238;
+
+  /* Тени */
+  --text-shadow: 0 0 5px var(--rem-blue), 0 0 10px rgba(126, 192, 238, 0.5);
+  --shadows-color: rgba(232, 59, 106, 0.3);
+
+  /* Рейтинги */
+  --very-high-rating: 232, 59, 106;  /* Розовый (9-10) */
+  --high-rating: 126, 192, 238;      /* Голубой (7-8) */
+  --average-rating: 255, 215, 0;     /* Золотой (5-6) */
+  --small-rating: 100, 100, 120;     /* Серый (1-4) */
+
+  /* Прогресс */
+  --time-filled: 126, 192, 238;
+  --time-empty: 60, 60, 90;
+  --anime-inprocess: 255, 215, 0;    /* Золотой */
+  --anime-complete: 232, 59, 106;    /* Розовый */
+  --manga-inprocess: 255, 215, 0;
+  --manga-complete: 26, 26, 46;
+
+  /* Блоки */
+  --block-color: 40, 40, 80;
+  --menu-back: 126, 192, 238;
+  --nick-cover: rgba(126, 192, 238, 0.15);
+  --popup-color: 30, 30, 60;
+}
+
+/* ======= ПРИМЕНЕНИЕ ЦВЕТОВ ======= */
+
+/* Рейтинги */
+.rate-10, .rate-9 { 
+  background: rgb(var(--very-high-rating)) !important; /* Розовый */
+  color: white !important;
+}
+.rate-8, .rate-7 { 
+  background: rgb(var(--high-rating)) !important; /* Голубой */
+  color: var(--rem-dark) !important;
+}
+.rate-6, .rate-5 { 
+  background: rgb(var(--average-rating)) !important; /* Золотой */
+  color: var(--rem-dark) !important;
+}
+.rate-4, .rate-3, .rate-2, .rate-1 { 
+  background: rgb(var(--small-rating)) !important; /* Серый */
+  color: var(--rem-light) !important;
+}
+
+/* Прогресс-бары */
+.progress-bar .filled { 
+  background: linear-gradient(to right, var(--rem-pink), var(--rem-blue)) !important;
+}
+.progress-bar .empty { 
+  background: rgb(var(--time-empty)) !important;
+}
+
+/* Статусы */
+.anime-inprocess { 
+  color: rgb(var(--anime-inprocess)) !important;
+  text-shadow: 0 0 3px rgba(255, 215, 0, 0.7);
+}
+.anime-complete { 
+  background: rgba(var(--anime-complete), 0.8) !important;
+}
+.manga-inprocess { 
+  color: rgb(var(--manga-inprocess)) !important;
+}
+.manga-complete { 
+  background: rgba(var(--manga-complete), 0.9) !important;
+}
+/* Активное меню */
+.b-menu .active {
+  border-bottom: 2px solid var(--rem-blue) !important;
+  color: var(--rem-light) !important;
+  text-shadow: var(--text-shadow);
+}
+/* Кнопки */
+.profile-actions a {
+  background: linear-gradient(to right, var(--rem-pink), var(--rem-blue)) !important;
+  border: none !important;
+}
+/* Карточки при наведении */
+.b-db_entry:hover {
+  box-shadow: 0 0 20px var(--shadows-color) !important;
+  border-left-color: var(--rem-blue) !important;
+}
+/* Текст в профиле */
+.profile-head .user-rates .text {
+  color: var(--rem-light) !important;
+  text-shadow: 1px 1px 2px #000;
+}
+.anime-inprocess {
+  animation: pulse 1.5s infinite ease-in-out !important;
+  color: rgb(255, 215, 0) !important; /* Явное указание золотого цвета */
+}
+
+@keyframes pulse {
+  0% { 
+    opacity: 0.7;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% { 
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+  }
+  100% { 
+    opacity: 0.7;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+}
+/* Кнопки действий */
+.profile-actions a {
+  background: rgba(232, 59, 106, 0.7) !important;
+  border: 1px solid rgba(126, 192, 238, 0.5) !important;
+}
+/* ======= КВАДРАТНАЯ АВАТАРКА ======= */
+.profile-head .avatar {
+  border-radius: 8px !important;
+  width: 160px !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  border: 3px solid rgba(126, 192, 238, 0.7) !important;
+  box-shadow:
+    0 0 15px rgba(126, 192, 238, 0.5),
+    inset 0 0 10px rgba(232, 59, 106, 0.3) !important;
+}
+
+/* ======= ЭФФЕКТ ЛЕДЯНОГО СИЯНИЯ ======= */
+.profile-head .avatar {
+  position: relative;
+  overflow: hidden !important;
+}
+
+.profile-head .avatar::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(126, 192, 238, 0) 0%,
+    rgba(126, 192, 238, 0.5) 50%,
+    rgba(126, 192, 238, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: iceGlow 4s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes iceGlow {
+  0% { transform: rotate(30deg) translate(-30%, -30%); }
+  100% { transform: rotate(30deg) translate(30%, 30%); }
+}
+
+/* Усилим эффект при наведении */
+.profile-head .avatar:hover::after {
+  opacity: 0.9;
+  animation-duration: 2s;
+}
+
+/* ======= ДОПОЛНИТЕЛЬНЫЕ ФИКСЫ ======= */
+/* Чтобы рамка не "прыгала" при наведении */
+.profile-head .avatar {
+  transition: all 0.3s ease-out !important;
+}
+
+/* Фикс для тени */
+.profile-head .avatar-container {
+  padding: 5px !important; /* Чтобы эффект не обрезался */
+}
+.profile-head .avatar::after {
+  background: linear-gradient(
+    to bottom right,
+    rgba(126, 192, 238, 0) 0%,
+    rgba(232, 59, 106, 0.3) 50%, /* Добавим розовый */
+    rgba(126, 192, 238, 0) 100%
+  );
+}
+/* ======= ЖЕСТКИЙ ФИКС ДЛЯ ИКОНОК ======= */
+.profile-head [class*="icon-"], 
+.profile-head [class*="b-icon"], 
+.profile-head [class^="icon-"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 24px !important;
+  filter: 
+    drop-shadow(0 0 2px #7ec0ee) 
+    brightness(1.5) !important;
+}
+
+/* Конкретные иконки (если не работают общие стили) */
+.profile-head .b-icon-mail,
+.profile-head .b-icon-ban,
+.profile-head .b-icon-cog {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Контейнер иконок */
+.profile-head .menu-icons,
+.profile-head .profile-actions {
+  display: flex !important;
+  gap: 12px !important;
+  padding: 8px 12px !important;
+  background: rgba(26, 26, 46, 0.9) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(5px) !important;
+}
+/* ======= ГАРАНТИЯ ВИДИМОСТИ ======= */
+.profile-head > div:not(.avatar-container) {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* 1. Фикс для текста в тёмных блоках */
+.b-db_entry .name, 
+.b-db_entry .rate-value {
+  color: #f0f0ff !important;
+  text-shadow: 0 0 3px rgba(0,0,0,0.7) !important;
+}
+
+/* 2. Усиление контраста кнопок */
+.profile-actions a {
+  background: linear-gradient(45deg, #e83b6a, #7ec0ee) !important;
+  box-shadow: 0 0 10px rgba(232,59,106,0.5) !important;
+}
+
+/* 3. Тонкая настройка теней */
+.profile-head .avatar {
+  box-shadow:
+    0 0 0 3px rgba(126,192,238,0.7),
+    0 0 25px rgba(126,192,238,0.4),
+    inset 0 0 20px rgba(232,59,106,0.3) !important;
+}
+button:hover {
+  cursor: url('https://i.ibb.co/.../ice-cursor.png'), pointer !important;
+}
