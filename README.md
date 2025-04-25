@@ -19,7 +19,10 @@
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
 @import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/prof_form_over.css");
+а дальше или:
 @import url("https://raw.githubusercontent.com/Dream-Mercy/Rem-theme/main/Rem-theme-shiki.css");
+или: 
+@import url("https://raw.githubusercontent.com/Dream-Mercy/Rem-theme/main/REM2.css");
 ```
 ## 🎀 Особенности темы
 Цветовая палитра Рем: глубокие синие и розовые оттенки
